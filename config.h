@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "NovaMono:pixelsize=20:antialias=true:autohint=true";
+static char *font = "NovaMono:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -92,47 +92,49 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 normal colors */
+  [0] = "#090b0b", /* black   */
+  [1] = "#151717", /* red     */
+  [2] = "#252928", /* green   */
+  [3] = "#3c4241", /* yellow  */
+  [4] = "#59625f", /* blue    */
+  [5] = "#7c8884", /* magenta */
+  [6] = "#a5b4b0", /* cyan    */
+  [7] = "#d3e7e1", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#efcfd9", /* black   */
+  [9]  = "#dab8c3", /* red     */
+  [10] = "#dea3b6", /* green   */
+  [11] = "#c0d4e3", /* yellow  */
+  [12] = "#d2b7e5", /* blue    */
+  [13] = "#77b9dc", /* magenta */
+  [14] = "#edd0d8", /* cyan    */
+  [15] = "#a3c9e0", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+  /* special colors */
+  [256] = "#050605", /* background */
+  [257] = "#cbded9", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
@@ -141,7 +143,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
