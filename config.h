@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Hack Nerd Font:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,28 +96,28 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#272727", /* black   */
-  [1] = "#cc231c", /* red     */
-  [2] = "#989719", /* green   */
-  [3] = "#d79920", /* yellow  */
-  [4] = "#448488", /* blue    */
-  [5] = "#b16185", /* magenta */
-  [6] = "#689d69", /* cyan    */
-  [7] = "#a89983", /* white   */
+  [0] = "#1e2030", /* black   */
+  [1] = "#ed8796", /* red     */
+  [2] = "#a6da95", /* green   */
+  [3] = "#eed49f", /* yellow  */
+  [4] = "#8aadf4", /* blue    */
+  [5] = "#f5bde6", /* magenta */
+  [6] = "#8bd5ca", /* cyan    */
+  [7] = "#b7bdf8", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#928373", /* black   */
-  [9]  = "#fb4833", /* red     */
-  [10] = "#b8ba25", /* green   */
-  [11] = "#fabc2e", /* yellow  */
-  [12] = "#83a597", /* blue    */
-  [13] = "#d3859a", /* magenta */
-  [14] = "#8ec07b", /* cyan    */
-  [15] = "#ebdbb2", /* white   */
+  [8] = "#1e2030", /* black   */
+  [9] = "#ed8796", /* red     */
+  [10] = "#a6da95", /* green   */
+  [11] = "#eed49f", /* yellow  */
+  [12] = "#8aadf4", /* blue    */
+  [13] = "#f5bde6", /* magenta */
+  [14] = "#8bd5ca", /* cyan    */
+  [15] = "#b7bdf8", /* white   */
 
   /* special colors */
-  [256] = "#050605", /* background */
-  [257] = "#cbded9", /* foreground */
+  [256] = "#24273a", /* background */
+  [257] = "#cad3f5", /* foreground */
 };
 
 /*
