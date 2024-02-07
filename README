@@ -6,8 +6,7 @@ st is a simple terminal emulator for X which sucks less.
 Requirements
 ------------
 In order to build st you need the Xlib header files.
-You need the nova mono font
-You also need to install scroll you dingus
+You need the hack nerd font
 
 
 Install
